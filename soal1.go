@@ -15,6 +15,10 @@ func main() {
 	//tekan enter setiap memasukkan nilai
 	for i := 0; i < length; i++ {
 		fmt.Scanln(&numbers[i])
+		if numbers[i] != 1 && numbers[i] != 0 {
+			fmt.Printf("wrong input")
+			return
+		}
 	}
 	fmt.Println("Array: ", numbers)
 	fmt.Println("Output: ", countOfConsecutiveOnes(numbers))
